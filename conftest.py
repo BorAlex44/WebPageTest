@@ -1,3 +1,6 @@
+import logging
+
+import requests
 import yaml
 import pytest
 from selenium import webdriver
@@ -6,8 +9,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
 
-with open('test_data') as file:
-    test_data = yaml.safe_load_all(file)
+with open('test_data.yaml') as file:
+    test_data = yaml.safe_load(file)
     test_browser = test_data.get('browser')
 
 @pytest.fixture(scope='session')
@@ -22,3 +25,32 @@ def browser():
         driver = webdriver.Chrome(service=service, options=options)
     yield driver
     driver.quit()
+
+
+@pytest.fixture()
+def get_token():
+    post = requests.post(url=test_data.get('path'),
+                         data={'username': test_data.get('login'), 'password': test_data.get('password')})
+    if post.status_code == 200:
+        token = post.json()['token']
+        logging.debug(f'Received token {token}')
+        return token
+    else:
+        logging.error('error receiving token')
+        return None
+
+@pytest.fixture()
+def new_post(get_token):
+    post = requests.post(url=test_data.get('url'), headers={'X-Auth-Token': get_token},
+                         data={'username': test_data.get('login'),
+                               'password': test_data.get('password'),
+                               'title': 'new_test_title',
+                               'description': 'new_test_description',
+                               'content': 'new_test_content'})
+    logging.debug(f'Create post with title: new_test_title, description: new_test_description, '
+                  f'content: new_test_content')
+    if post.status_code == 200:
+        return post.json()['title']
+    else:
+        logging.error('error find post')
+        return None
