@@ -127,6 +127,10 @@ class OperationsHelper(BasePage):
         return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_RES_CREATE'],
                                           description='result create post text')
 
+    def get_placeholder_text(self):
+        return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_PLACEHOLDER'],
+                                          description='result text placeholder')
+
     # All
     def alert(self):
         logging.info('Get alert text')

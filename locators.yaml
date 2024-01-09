@@ -15,5 +15,6 @@ xpath:
   LOCATOR_CREATE_POST_BTN: //*[@id="create-item"]/div/div/div[7]/div/button
   LOCATOR_RES_CREATE: //*[@id="app"]/main/div/div[3]/div[1]/a[1]/h2
   LOCATOR_HOME_BTN: //*[@id="app"]/main/nav/a/span
+  LOCATOR_PLACEHOLDER: //*[@id="login"]/div[1]/label/span[2]
 css:
   LOCATOR_LOGIN_BTN: button

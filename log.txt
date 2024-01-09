@@ -1,12 +1,8 @@
-2024-01-08 15:15:45 INFO ====== WebDriver manager ======
-2024-01-08 15:15:46 INFO Get LATEST chromedriver version for google-chrome
-2024-01-08 15:15:46 INFO Get LATEST chromedriver version for google-chrome
-2024-01-08 15:15:46 INFO Get LATEST chromedriver version for google-chrome
-2024-01-08 15:15:46 INFO WebDriver version 120.0.6099.109 selected
-2024-01-08 15:15:46 INFO Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/win32/chromedriver-win32.zip
-2024-01-08 15:15:46 INFO About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/win32/chromedriver-win32.zip
-2024-01-08 15:15:47 INFO Driver downloading response is 200
-2024-01-08 15:15:49 INFO Get LATEST chromedriver version for google-chrome
-2024-01-08 15:15:49 INFO Driver has been saved in cache [C:\Users\BorAlex\.wdm\drivers\chromedriver\win64\120.0.6099.109]
-2024-01-08 15:15:50 INFO Test-1  starting
-2024-01-08 15:15:52 INFO Test-2 starting
+2024-01-09 19:46:01 INFO ====== WebDriver manager ======
+2024-01-09 19:46:01 INFO Get LATEST chromedriver version for google-chrome
+2024-01-09 19:46:01 INFO Get LATEST chromedriver version for google-chrome
+2024-01-09 19:46:02 INFO Driver [C:\Users\BorAlex\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+2024-01-09 19:46:03 INFO Test-1  starting
+2024-01-09 19:46:04 INFO Test-2 starting
+2024-01-09 19:46:08 INFO Test-3 starting
+2024-01-09 19:46:11 INFO Test-4 starting
