@@ -15,6 +15,8 @@ xpath:
   LOCATOR_CREATE_POST_BTN: //*[@id="create-item"]/div/div/div[7]/div/button
   LOCATOR_RES_CREATE: //*[@id="app"]/main/div/div[3]/div[1]/a[1]/h2
   LOCATOR_HOME_BTN: //*[@id="app"]/main/nav/a/span
-  LOCATOR_PLACEHOLDER: //*[@id="login"]/div[1]/label/span[2]
+  LOCATOR_PLACEHOLDER_USERNAME: //*[@id="login"]/div[1]/label/span[2]
+  LOCATOR_PLACEHOLDER_1: //*[@id="login"]/div[1]/label/input
 css:
   LOCATOR_LOGIN_BTN: button
+  LOCATOR_PLACEHOLDER_USERNAME_CSS: .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label
