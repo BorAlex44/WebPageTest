@@ -44,7 +44,35 @@ def test_placeholder_username_background_color(browser):
     assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_PLACEHOLDER_USERNAME'],
                                           'background-color') == 'rgba(0, 0, 0, 0)'
 
+def test_username_field_height(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_USERNAME_FIELD'],
+                                          'height') == '56px'
 
+def test_username_field_width(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_USERNAME_FIELD'],
+                                          'width') == '360px'
+
+def test_username_field_padding(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_USERNAME_FIELD'],
+                                          'padding') == '0px 16px'
+
+def test_username_input_field_height(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_LOGIN_FIELD'],
+                                          'height') == '28px'
+
+def test_username_input_field_width(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_LOGIN_FIELD'],
+                                          'width') == '328px'
 def test_step_1(browser):
     logging.info('Test-1  starting')
     test_page = OperationsHelper(browser)

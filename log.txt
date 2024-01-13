@@ -1,8 +1,8 @@
-2024-01-10 18:34:14 INFO ====== WebDriver manager ======
-2024-01-10 18:34:15 INFO Get LATEST chromedriver version for google-chrome
-2024-01-10 18:34:15 INFO Get LATEST chromedriver version for google-chrome
-2024-01-10 18:34:15 INFO Driver [C:\Users\BorAlex\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
-2024-01-10 18:34:17 INFO Test-1  starting
-2024-01-10 18:34:19 INFO Test-2 starting
-2024-01-10 18:34:22 INFO Test-3 starting
-2024-01-10 18:34:25 INFO Test-4 starting
+2024-01-13 15:39:03 INFO ====== WebDriver manager ======
+2024-01-13 15:39:03 INFO Get LATEST chromedriver version for google-chrome
+2024-01-13 15:39:04 INFO Get LATEST chromedriver version for google-chrome
+2024-01-13 15:39:04 INFO Driver [C:\Users\BorAlex\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+2024-01-13 15:39:06 INFO Test-1  starting
+2024-01-13 15:39:07 INFO Test-2 starting
+2024-01-13 15:39:10 INFO Test-3 starting
+2024-01-13 15:39:14 INFO Test-4 starting
