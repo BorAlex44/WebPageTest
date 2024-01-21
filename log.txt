@@ -1,8 +1,44 @@
-2024-01-13 15:39:03 INFO ====== WebDriver manager ======
-2024-01-13 15:39:03 INFO Get LATEST chromedriver version for google-chrome
-2024-01-13 15:39:04 INFO Get LATEST chromedriver version for google-chrome
-2024-01-13 15:39:04 INFO Driver [C:\Users\BorAlex\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
-2024-01-13 15:39:06 INFO Test-1  starting
-2024-01-13 15:39:07 INFO Test-2 starting
-2024-01-13 15:39:10 INFO Test-3 starting
-2024-01-13 15:39:14 INFO Test-4 starting
+2024-01-21 14:54:23 INFO ====== WebDriver manager ======
+2024-01-21 14:54:23 INFO Get LATEST chromedriver version for google-chrome
+2024-01-21 14:54:23 INFO Get LATEST chromedriver version for google-chrome
+2024-01-21 14:54:23 INFO Driver [C:\Users\BorAlex\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+2024-01-21 14:54:25 ERROR find element exception
+Traceback (most recent call last):
+  File "F:\developer\WebPageTest\base_app.py", line 17, in find_element
+    element = WebDriverWait(self.driver, time).until(ec.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\developer\WebPageTest\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\developer\WebPageTest\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: WebDriver.find_element() takes from 1 to 3 positional arguments but 20 were given
+2024-01-21 14:54:26 ERROR find element exception
+Traceback (most recent call last):
+  File "F:\developer\WebPageTest\base_app.py", line 17, in find_element
+    element = WebDriverWait(self.driver, time).until(ec.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\developer\WebPageTest\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\developer\WebPageTest\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: WebDriver.find_element() takes from 1 to 3 positional arguments but 23 were given
+2024-01-21 14:54:27 ERROR find element exception
+Traceback (most recent call last):
+  File "F:\developer\WebPageTest\base_app.py", line 17, in find_element
+    element = WebDriverWait(self.driver, time).until(ec.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\developer\WebPageTest\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\developer\WebPageTest\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: WebDriver.find_element() takes from 1 to 3 positional arguments but 18 were given
+2024-01-21 14:54:28 INFO Test-1  starting
+2024-01-21 14:54:29 INFO Test-2 starting
+2024-01-21 14:54:32 INFO Test-3 starting
+2024-01-21 14:54:35 INFO Test-4 starting

@@ -66,10 +66,11 @@ class OperationsHelper(BasePage):
 
     # Enter text
     def enter_login(self, word):
-        self.enter_text_into_field(TestSearchLocators.ids['LOCATOR_LOGIN_FIELD'], word, description='login form')
+        self.enter_text_into_field(TestSearchLocators.ids['LOCATOR_LOGIN_INPUT_FIELD'], word, description='login form')
 
     def enter_pass(self, word):
-        self.enter_text_into_field(TestSearchLocators.ids['LOCATOR_PASS_FIELD'], word, description='password form')
+        self.enter_text_into_field(TestSearchLocators.ids['LOCATOR_PASSWORD_INPUT_FIELD'], word,
+                                   description='password form')
 
     def enter_your_name_to_contact_field(self, word):
         self.enter_text_into_field(TestSearchLocators.ids['LOCATOR_CONTACT_YOUR_NAME_FIELD'], word,
@@ -127,13 +128,25 @@ class OperationsHelper(BasePage):
         return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_RES_CREATE'],
                                           description='result create post text')
 
-    def get_placeholder_text(self):
+    def get_placeholder_username_text(self):
         return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_PLACEHOLDER_USERNAME'],
-                                          description='result text placeholder')
+                                          description='result text username placeholder')
 
     def get_placeholder_text_before(self):
-        return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_PLACEHOLDER_1'],
-                                          description='result text placeholder')
+        return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_PLACEHOLDER_USERNAME_BEFORE'],
+                                          description='result text username placeholder before')
+
+    def get_placeholder_password_text(self):
+        return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_PLACEHOLDER_PASSWORD'],
+                                          description='result text password placeholder')
+
+    def get_placeholder_password_text_before(self):
+        return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_PLACEHOLDER_PASSWORD_BEFORE'],
+                                          description='result text password placeholder before')
+
+    def get_login_button_text(self):
+        return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_LOGIN_BTN'],
+                                          description='result text login button')
 
     # All
     def alert(self):
