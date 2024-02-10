@@ -148,6 +148,10 @@ class OperationsHelper(BasePage):
         return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_LOGIN_BTN'],
                                           description='result text login button')
 
+    def get_copyright_text(self):
+        return self.get_text_from_element(TestSearchLocators.ids['LOCATOR_COPYRIGHT'],
+                                          description='result text copyright')
+
     # All
     def alert(self):
         logging.info('Get alert text')

@@ -23,6 +23,7 @@ xpath:
   LOCATOR_PLACEHOLDER_USERNAME_BEFORE: //*[@id="login"]/div[1]/label/input
   LOCATOR_PLACEHOLDER_PASSWORD_BEFORE: //*[@id="login"]/div[2]/label/input
   LOCATOR_LOGIN_BUTTON_TEXT: //*[@id="login"]/div[3]/button/span
+  LOCATOR_COPYRIGHT: //*[@id="app"]/main/footer/div
 css:
   LOCATOR_LOGIN_BTN: button
   LOCATOR_PLACEHOLDER_USERNAME_CSS: .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label

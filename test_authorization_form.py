@@ -8,13 +8,6 @@ with open('test_data.yaml') as file:
     test_data = yaml.safe_load(file)
 
 
-def test_displays_username_field(browser):
-    test_page = OperationsHelper(browser)
-    test_page.go_to_site()
-    test_page.find_element('LOCATOR_FIELD_LOGIN')
-    assert True
-
-
 def test_placeholder_username(browser):
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
@@ -97,13 +90,6 @@ def test_input_username_color(browser):
     test_page.enter_login('Test')
     assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_LOGIN_INPUT_FIELD'],
                                           'color') == 'rgba(0, 0, 0, 0.87)'
-
-
-def test_displays_password_field(browser):
-    test_page = OperationsHelper(browser)
-    test_page.go_to_site()
-    test_page.find_element('LOCATOR_PASSWORD_FIELD')
-    assert True
 
 
 def test_placeholder_password(browser):
@@ -190,13 +176,6 @@ def test_input_password_color(browser):
                                           'color') == 'rgba(0, 0, 0, 0.87)'
 
 
-def test_displays_button_login(browser):
-    test_page = OperationsHelper(browser)
-    test_page.go_to_site()
-    test_page.find_element('LOCATOR_LOGIN_BTN')
-    assert True
-
-
 def test_button_login_background_color(browser):
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
@@ -215,10 +194,12 @@ def test_button_login_width(browser):
     test_page.go_to_site()
     assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_LOGIN_BTN'], 'width') == '360px'
 
+
 def test_button_login_text(browser):
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
     assert test_page.get_login_button_text() == 'LOGIN'
+
 
 def test_button_login_text_color(browser):
     test_page = OperationsHelper(browser)
@@ -226,12 +207,44 @@ def test_button_login_text_color(browser):
     assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_LOGIN_BUTTON_TEXT'],
                                           'color') == 'rgba(255, 255, 255, 1)'
 
+
 def test_button_login_text_font_size(browser):
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
     assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_LOGIN_BUTTON_TEXT'],
                                           'font-size') == '14px'
-def test_step_1(browser):
+
+
+def test_copyright_text(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_copyright_text() == 'Copyright ⓒ 2022 . Geekbrains'
+
+def test_copyright_background_color(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_COPYRIGHT'],
+                                          'background-color') == 'rgba(0, 0, 0, 0)'
+
+def test_copyright_text_color(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_COPYRIGHT'],
+                                          'color') == 'rgba(0, 0, 0, 1)'
+
+def test_copyright_text_font_size(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_COPYRIGHT'],
+                                          'font-size') == '16px'
+
+def test_copyright_text_line_height(browser):
+    test_page = OperationsHelper(browser)
+    test_page.go_to_site()
+    assert test_page.get_element_property(TestSearchLocators.ids['LOCATOR_COPYRIGHT'],
+                                          'line-height') == '24px'
+
+def test_authorization_with_invalid_username_and_password(browser):
     logging.info('Test-1  starting')
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
@@ -241,7 +254,7 @@ def test_step_1(browser):
     assert test_page.get_error_text() == '401'
 
 
-def test_step_2(browser):
+def test_authorization_with_empty_login_field(browser):
     logging.info('Test-2 starting')
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
@@ -252,7 +265,7 @@ def test_step_2(browser):
     assert test_page.get_error_text() == '401'
 
 
-def test_step_3(browser):
+def test_authorization_with_empty_password_field(browser):
     logging.info('Test-3 starting')
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
@@ -263,7 +276,7 @@ def test_step_3(browser):
     assert test_page.get_error_text() == '401'
 
 
-def test_step_4(browser):
+def test_authorization_with_expected_username_and_password(browser):
     logging.info('Test-4 starting')
     test_page = OperationsHelper(browser)
     test_page.go_to_site()
